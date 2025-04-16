@@ -24,12 +24,10 @@ export default function Home() {
                 toggleSimbian,
             }}
         >
-            <div className="min-h-screen font-[family-name:var(--font-geist-sans)] flex flex-col w-[110ch] py-5 gap-10 px-5">
-                <div className="flex flex-col gap-4 items-start mt-10">
-                    <h1 className="text-4xl font-bold text-blue-200">
-                        {withSimbian ? "With Simbian" : " Without Simbian"}
-                    </h1>
-                </div>
+            <div className="min-h-screen font-[family-name:var(--font-geist-sans)] flex flex-col xl:w-[110ch] py-5 gap-10 px-5">
+                <h1 className="text-4xl font-bold text-blue-200 text-center mt-10 xl:text-left">
+                    {withSimbian ? "With Simbian" : " Without Simbian"}
+                </h1>
                 <Summaries />
                 <Cards />
             </div>

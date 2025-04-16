@@ -55,7 +55,7 @@ export const MoreFromSimbian = () => {
     return (
         <div
             ref={scope}
-            className="parent min-h-screen opacity-0 flex flex-col gap-10 items-center justify-center mt-10"
+            className="parent min-h-screen opacity-0 flex flex-col gap-10 items-center justify-center mt-10 p-4"
         >
             <div className="div1 text-6xl text-center lg:text-left lg:text-8xl text-blue-200 lg:max-w-min font-semibold place-self-center opacity-0">
                 Simbian Does More Than You Think
