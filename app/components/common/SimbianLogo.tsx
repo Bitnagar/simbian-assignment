@@ -7,7 +7,7 @@ export default function SimbianLogo() {
             className="opacity-0 absolute top-20 left-16"
         >
             <Image
-                src="/simbian-logo.png"
+                src="https://4bxg2e7sah.ufs.sh/f/fr48RyVaKIGoTtlLQCDc0hbe7ENy4BLnx9uzKaVsHFvtMOA6"
                 alt="logo"
                 width={180}
                 height={10}
