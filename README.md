@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Simbian's Frontend Developer Assignment - Shivam Bhatnagar
 
-## Getting Started
+## Include a short README (1-2 paragraphs) describing
 
-First, run the development server:
+### Your thought process
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I wanted to build something that could translate to various device widths. I wanted to keep the primary theme of receiving alerts and acting upon them. So built the 3 cards depicting the same. The content was extra so added another section in which `More from Simbian` is shown
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Used Next.js 14, TailwindCSS and Framer Motion for animations.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The requirements got updated 24 hours after I got the email from Lekhraj. So I had to continue building this due to time constraints. Kindly make sure to get the requirements correct before sending out the emails.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Animation library used
 
-## Learn More
+Framer Motion
 
-To learn more about Next.js, take a look at the following resources:
+### Any known issues or improvements you would make with more time
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+No known Issues. I would like to build a more polished version. Add Light mode and dark mode support
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+DO NOT USE THIS PROJECT ANYWHERE ELSE.
