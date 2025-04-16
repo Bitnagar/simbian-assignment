@@ -33,6 +33,7 @@ export function IgnoredThreats() {
         });
         animate("#simbian-logo", { opacity: 0 }, { ease: "linear" });
 
+        // basically remove every alert from card and set the count to 0, same for every card
         if (withSimbian) {
             animate("#alert-1", { opacity: 0 }, { ease: "linear", delay: 1 });
             animate("#alert-2", { opacity: 0 }, { ease: "linear", delay: 1.2 });
