@@ -46,35 +46,35 @@ const WithoutSimbianSummary = () => {
     return (
         <div
             ref={scope}
-            className="flex items-center gap-2 justify-between"
+            className="flex flex-col md:flex-row items-center gap-4 lg:gap-2 justify-between"
         >
             <div
                 id="ws-1"
-                className="opacity-0 flex items-center gap-2 border border-red-950 w-fit p-2 rounded-lg"
+                className="opacity-0 flex justify-center gap-2 border border-red-950 w-full lg:w-fit p-2 rounded-lg"
                 style={{ transform: "translateY(20px)" }}
             >
                 <CircleX />
-                <p className="text-[13px] text-red-500">
+                <p className="text-base lg:text-[13px] text-red-500">
                     Wasting valuable analyst time on false positives
                 </p>
             </div>
             <div
                 id="ws-2"
-                className="opacity-0 flex items-center gap-2 border border-red-950 w-fit p-2 rounded-lg"
+                className="opacity-0 flex justify-center gap-2 border border-red-950 w-full lg:w-fit p-2 rounded-lg"
                 style={{ transform: "translateY(20px)" }}
             >
                 <CircleX />
-                <p className="text-[13px] text-red-500">
+                <p className="text-base lg:text-[13px] text-red-500">
                     Processing one alert at a time, missing the big picture
                 </p>
             </div>
             <div
                 id="ws-3"
-                className="opacity-0 flex items-center gap-2 border border-red-950 w-fit p-2 rounded-lg"
+                className="opacity-0 flex justify-center gap-2 border border-red-950 w-full lg:w-fit p-2 rounded-lg"
                 style={{ transform: "translateY(20px)" }}
             >
                 <CircleX />
-                <p className="text-[13px] text-red-500">
+                <p className="text-base lg:text-[13px] text-red-500">
                     More time fixing SOAR automation, less time on real threats
                 </p>
             </div>

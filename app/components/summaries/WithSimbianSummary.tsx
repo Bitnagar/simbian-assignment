@@ -46,11 +46,11 @@ const WithSimbianSummary = () => {
     return (
         <div
             ref={scope}
-            className="flex items-center gap-2 justify-between"
+            className="flex flex-col md:flex-row items-center gap-4 lg:gap-2 justify-between"
         >
             <div
                 id="ws-1"
-                className="opacity-0 flex items-center gap-2 border border-green-950 w-fit p-2 rounded-lg"
+                className="opacity-0 flex items-center justify-center gap-2 border border-green-950 w-full lg:w-fit p-2 rounded-lg"
                 style={{ transform: "translateY(20px)" }}
             >
                 <CheckIcon />
@@ -60,7 +60,7 @@ const WithSimbianSummary = () => {
             </div>
             <div
                 id="ws-2"
-                className="opacity-0 flex items-center gap-2 border border-green-950 w-fit p-2 rounded-lg"
+                className="opacity-0 flex items-center justify-center gap-2 border border-green-950  w-full lg:w-fit  p-2 rounded-lg"
                 style={{ transform: "translateY(20px)" }}
             >
                 <CheckIcon />
@@ -70,7 +70,7 @@ const WithSimbianSummary = () => {
             </div>
             <div
                 id="ws-3"
-                className="opacity-0 flex items-center gap-2 border border-green-950 w-fit p-2 rounded-lg"
+                className="opacity-0 flex items-center justify-center gap-2 border border-green-950  w-full lg:w-fit  p-2 rounded-lg"
                 style={{ transform: "translateY(20px)" }}
             >
                 <CheckIcon />
@@ -84,7 +84,7 @@ const WithSimbianSummary = () => {
 
 export default WithSimbianSummary;
 
-const CheckIcon = () => {
+export const CheckIcon = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
