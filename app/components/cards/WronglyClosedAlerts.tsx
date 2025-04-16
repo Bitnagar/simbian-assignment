@@ -1,13 +1,13 @@
 import { AnimationStateContext } from "@/app/contexts/contexts";
-import { cn } from "@/app/utils/utils";
 import {
     AnimatePresence,
     useAnimate,
     useMotionValue,
     useMotionValueEvent,
 } from "motion/react";
-import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
+import SimbianLogo from "../common/SimbianLogo";
+import CardHeading from "../common/CardHeading";
 
 export function WronglyClosedAlerts() {
     const { withSimbian } = useContext(AnimationStateContext);
@@ -54,70 +54,26 @@ export function WronglyClosedAlerts() {
         <AnimatePresence>
             <div
                 ref={scope}
-                className={cn(
-                    "relative place-self-center opacity-0 flex flex-col gap-4 bg-stone-900 border border-white/10 shadow-md rounded-2xl p-4 w-[300px] h-[380px] transition-colors duration-200"
-                )}
+                className="relative place-self-center opacity-0 flex flex-col gap-4 bg-stone-900 border border-white/10 shadow-md rounded-2xl p-4 w-[300px] h-[380px] transition-colors duration-200"
             >
-                <div
-                    className={cn(
-                        "h-full w-full border border-white/10 bg-stone-800 rounded-lg p-4 gap-3 flex flex-col transition-colors duration-200 overflow-y-auto"
-                    )}
-                >
-                    <div
-                        id="alert-1"
-                        className={cn(
-                            "opacity-0 w-full h-[30px] rounded-lg bg-stone-600 border shadow-lg border-white/10 transition-colors duration-200 mb-2"
-                        )}
-                    />
-                    <div
-                        id="alert-2"
-                        className={cn(
-                            "opacity-0 w-full h-[30px] rounded-lg bg-stone-600 border shadow-lg border-white/10 transition-colors duration-200 mb-2"
-                        )}
-                    />
-                    <div
-                        id="alert-3"
-                        className={cn(
-                            "opacity-0 w-full h-[30px] rounded-lg bg-stone-600 border shadow-lg border-white/10 transition-colors duration-200 mb-2"
-                        )}
-                    />
-                    <div
-                        id="alert-4"
-                        className={cn(
-                            "opacity-0 w-full h-[30px] rounded-lg bg-stone-600 border shadow-lg border-white/10 transition-colors duration-200 mb-2"
-                        )}
-                    />
-
-                    <div
-                        id="simbian-logo"
-                        className="opacity-0 absolute top-20 left-16"
-                    >
-                        <Image
-                            src="/simbian-logo.png"
-                            alt="logo"
-                            width={180}
-                            height={10}
-                            className="grayscale brightness-90"
-                        />
-                    </div>
+                <div className="h-full w-full border border-white/10 bg-stone-800 rounded-lg p-4 gap-3 flex flex-col transition-colors duration-200 overflow-y-auto">
+                    <MockAlert id="alert-1" />
+                    <MockAlert id="alert-2" />
+                    <MockAlert id="alert-3" />
+                    <MockAlert id="alert-4" />
+                    <SimbianLogo />
                 </div>
-                <div className="flex gap-2 justify-between items-center font-medium text-lg w-full">
-                    <h1
-                        className={cn("", {
-                            "text-green-500": withSimbian,
-                        })}
-                    >
-                        Wrongly Close Alerts
-                    </h1>
-                    <h1
-                        className={cn("", {
-                            "text-green-500": withSimbian,
-                        })}
-                    >
-                        {displayCount}
-                    </h1>
-                </div>
+                <CardHeading displayCount={displayCount} />
             </div>
         </AnimatePresence>
+    );
+}
+
+function MockAlert({ id }: { id: string }) {
+    return (
+        <div
+            id={id}
+            className="opacity-0 w-full h-[30px] rounded-lg bg-stone-600 border shadow-lg border-white/10 transition-colors duration-200 mb-2"
+        />
     );
 }

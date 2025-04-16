@@ -1,6 +1,6 @@
 import { useAnimate, useInView } from "motion/react";
 import { useEffect } from "react";
-import { CheckIcon } from "../summaries/WithSimbianSummary";
+import CheckIcon from "../common/CheckIcon";
 
 export const MoreFromSimbian = () => {
     const [scope, animate] = useAnimate();

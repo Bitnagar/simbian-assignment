@@ -7,8 +7,9 @@ import {
     useMotionValueEvent,
     motion,
 } from "motion/react";
-import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
+import SimbianLogo from "../common/SimbianLogo";
+import CardHeading from "../common/CardHeading";
 
 export function ActiveThreats() {
     const { alert, withSimbian } = useContext(AnimationStateContext);
@@ -83,81 +84,44 @@ export function ActiveThreats() {
                         }
                     )}
                 >
-                    <div
+                    <MockAlert
                         id="alert-1"
-                        className={cn(
-                            "opacity-0 w-full h-[30px] rounded-lg bg-stone-600 border shadow-lg border-white/10 transition-colors duration-200 mb-2",
-                            {
-                                "bg-red-800/50": alert,
-                            }
-                        )}
+                        alert={alert}
                     />
-                    <div
+                    <MockAlert
                         id="alert-2"
-                        className={cn(
-                            "opacity-0 w-full h-[30px] rounded-lg bg-stone-600 border shadow-lg border-white/10 transition-colors duration-200 mb-2",
-                            {
-                                "bg-red-800/50": alert,
-                            }
-                        )}
+                        alert={alert}
                     />
-                    <div
+                    <MockAlert
                         id="alert-3"
-                        className={cn(
-                            "opacity-0 w-full h-[30px] rounded-lg bg-stone-600 border shadow-lg border-white/10 transition-colors duration-200 mb-2",
-                            {
-                                "bg-red-800/50": alert,
-                            }
-                        )}
+                        alert={alert}
                     />
-                    <div
+                    <MockAlert
                         id="alert-4"
-                        className={cn(
-                            "opacity-0 w-full h-[30px] rounded-lg bg-stone-600 border shadow-lg border-white/10 transition-colors duration-200 mb-2",
-                            {
-                                "bg-red-800/50": alert,
-                            }
-                        )}
+                        alert={alert}
                     />
-                    <div
+                    <MockAlert
                         id="alert-5"
-                        className={cn(
-                            "opacity-0 w-full h-[30px] rounded-lg bg-stone-600 border shadow-lg border-white/10 transition-colors duration-200 mb-2",
-                            {
-                                "bg-red-800/50": alert,
-                            }
-                        )}
+                        alert={alert}
                     />
-                    <div
-                        id="simbian-logo"
-                        className="opacity-0 absolute top-20 left-16"
-                    >
-                        <Image
-                            src="/simbian-logo.png"
-                            alt="logo"
-                            width={180}
-                            height={10}
-                            className="grayscale brightness-90"
-                        />
-                    </div>
+                    <SimbianLogo />
                 </div>
-                <div className="flex gap-2 justify-between items-center font-medium text-lg w-full">
-                    <h1
-                        className={cn("", {
-                            "text-green-500": withSimbian,
-                        })}
-                    >
-                        Active Threats
-                    </h1>
-                    <h1
-                        className={cn("", {
-                            "text-green-500": withSimbian,
-                        })}
-                    >
-                        {displayCount}
-                    </h1>
-                </div>
+                <CardHeading displayCount={displayCount} />
             </motion.div>
         </AnimatePresence>
     );
 }
+
+const MockAlert = ({ id, alert }: { id: string; alert: boolean }) => {
+    return (
+        <div
+            id={id}
+            className={cn(
+                "opacity-0 w-full h-[30px] rounded-lg bg-stone-600 border shadow-lg border-white/10 transition-colors duration-200 mb-2",
+                {
+                    "bg-red-800/50": alert,
+                }
+            )}
+        />
+    );
+};
