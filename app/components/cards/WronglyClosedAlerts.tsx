@@ -1,4 +1,4 @@
-import { AnimateStateProvider } from "@/app/page";
+import { AnimationStateContext } from "@/app/contexts/contexts";
 import { cn } from "@/app/utils/utils";
 import {
     AnimatePresence,
@@ -10,7 +10,7 @@ import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
 
 export function WronglyClosedAlerts() {
-    const { withSimbian } = useContext(AnimateStateProvider);
+    const { withSimbian } = useContext(AnimationStateContext);
     const [scope, animate] = useAnimate();
     const countMotionValue = useMotionValue(0);
     const [displayCount, setDisplayCount] = useState(0);

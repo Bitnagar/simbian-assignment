@@ -2,16 +2,9 @@
 
 import Cards from "./components/cards/Cards";
 import { Summaries } from "./components/summaries/Summaries";
-import { createContext, useState } from "react";
+import { useState } from "react";
 import { MoreFromSimbian } from "./components/MoreFromSimbian/MoreFromSimbian";
-
-export const AnimateStateProvider = createContext({
-    withSimbian: false,
-    showAlert: () => {},
-    alert: false,
-    hideAlert: () => {},
-    toggleSimbian: () => {},
-});
+import { AnimationStateContext } from "./contexts/contexts";
 
 export default function Home() {
     const [withSimbian, setWithSimbian] = useState(false);
@@ -22,7 +15,7 @@ export default function Home() {
     const toggleSimbian = () => setWithSimbian((prev) => !prev);
 
     return (
-        <AnimateStateProvider.Provider
+        <AnimationStateContext.Provider
             value={{
                 withSimbian,
                 alert,
@@ -41,6 +34,6 @@ export default function Home() {
                 <Cards />
             </div>
             <MoreFromSimbian />
-        </AnimateStateProvider.Provider>
+        </AnimationStateContext.Provider>
     );
 }

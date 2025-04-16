@@ -2,11 +2,12 @@ import { useContext, useEffect } from "react";
 import { ActiveThreats } from "./ActiveThreats";
 import { IgnoredThreats } from "./IgnoredAlerts";
 import { WronglyClosedAlerts } from "./WronglyClosedAlerts";
-import { AnimateStateProvider } from "@/app/page";
+import { AnimationStateContext } from "@/app/contexts/contexts";
 
 const Cards = () => {
-    const { toggleSimbian, hideAlert, showAlert } =
-        useContext(AnimateStateProvider);
+    const { toggleSimbian, hideAlert, showAlert } = useContext(
+        AnimationStateContext
+    );
 
     useEffect(() => {
         const setTimeoutId = setTimeout(() => {

@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import WithoutSimbianSummary from "./WithoutSimbianSummary";
 import WithSimbianSummary from "./WithSimbianSummary";
-import { AnimateStateProvider } from "@/app/page";
+import { AnimationStateContext } from "@/app/contexts/contexts";
 
 export function Summaries() {
-    const { withSimbian } = useContext(AnimateStateProvider);
+    const { withSimbian } = useContext(AnimationStateContext);
     return (
         <>{withSimbian ? <WithSimbianSummary /> : <WithoutSimbianSummary />}</>
     );

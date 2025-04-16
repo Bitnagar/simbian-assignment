@@ -1,4 +1,4 @@
-import { AnimateStateProvider } from "@/app/page";
+import { AnimationStateContext } from "@/app/contexts/contexts";
 import { cn } from "@/app/utils/utils";
 import {
     AnimatePresence,
@@ -11,7 +11,7 @@ import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
 
 export function ActiveThreats() {
-    const { alert, withSimbian } = useContext(AnimateStateProvider);
+    const { alert, withSimbian } = useContext(AnimationStateContext);
     const [scope, animate] = useAnimate();
     const countMotionValue = useMotionValue(0);
     const [displayCount, setDisplayCount] = useState(0);
