@@ -106,7 +106,10 @@ export function ActiveThreats() {
                     />
                     <SimbianLogo />
                 </div>
-                <CardHeading displayCount={displayCount} />
+                <CardHeading
+                    displayCount={displayCount}
+                    heading="Active Threats"
+                />
             </motion.div>
         </AnimatePresence>
     );

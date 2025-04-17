@@ -63,7 +63,10 @@ export function WronglyClosedAlerts() {
                     <MockAlert id="alert-4" />
                     <SimbianLogo />
                 </div>
-                <CardHeading displayCount={displayCount} />
+                <CardHeading
+                    displayCount={displayCount}
+                    heading="Wrongly Closed Alerts"
+                />
             </div>
         </AnimatePresence>
     );

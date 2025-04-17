@@ -4,8 +4,10 @@ import { useContext } from "react";
 
 export default function CardHeading({
     displayCount,
+    heading,
 }: {
     displayCount: number;
+    heading: string;
 }) {
     const { withSimbian } = useContext(AnimationStateContext);
 
@@ -16,7 +18,7 @@ export default function CardHeading({
                     "text-green-500": withSimbian,
                 })}
             >
-                Wrongly Close Alerts
+                {heading}
             </h1>
             <h1
                 className={cn("", {

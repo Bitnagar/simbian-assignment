@@ -67,7 +67,10 @@ export function IgnoredThreats() {
                     <MockAlert id="alert-5" />
                     <SimbianLogo />
                 </div>
-                <CardHeading displayCount={displayCount} />
+                <CardHeading
+                    displayCount={displayCount}
+                    heading="Ignored Alerts"
+                />
             </div>
         </AnimatePresence>
     );
